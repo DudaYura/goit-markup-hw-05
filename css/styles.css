@@ -415,7 +415,7 @@ img {
   margin-right: 30px;
 }
 
-/* ---------------------ПОДВАЛ----------------------------- */
+/* ------------------------------ПОДВАЛ----------------------------- */
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
@@ -505,7 +505,7 @@ img {
 .footer-soc-link:hover {
   background-color: #2196f3;
 }
-/* ----------------ПОРТФОЛИО---------------------- */
+/* ----------------------------------ПОРТФОЛИО---------------------------------- */
 .section-portfolio {
   padding: 94px 0px;
 }
@@ -615,7 +615,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--text-color);
 }
-/* --------------МОДАЛЬНОЕ ОКНО------------------------- */
+/* -----------------------------------МОДАЛЬНОЕ ОКНО---------------------------------- */
 .backdrop {
   position: fixed;
   top: 0;
@@ -625,13 +625,18 @@ img {
 
   transition: opacity var(--time-transition), visibility var(--time-transition);
 }
+.backdrop.is-hidden .modal {
+  transform: scale(0.5) rotate(-360deg);
+}
 .modal {
   width: 528px;
   height: 581px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  transition: scale var(--time-transition), rotate var(--time-transition);
+  transform: translate(-50%, -50%) scale(1) rotate(0);
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -645,7 +650,13 @@ img {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  background-color: transparent;
+  padding: 6px;
+  margin: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-icon {
+  display: block;
 }
 .is-hidden {
   opacity: 0;
