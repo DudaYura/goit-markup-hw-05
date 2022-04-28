@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!--ШАПКА-->
+    <!---------------------------------ШАПКА------------------------------------>
     <header class="header">
       <div class="container">
         <a class="header-link-main link" href=""
@@ -57,19 +57,19 @@
         </ul>
       </div>
     </header>
-    <!--ЗАКАЗ УСЛУГ-->
+    <!-----------------------------ЗАКАЗ УСЛУГ--------------------------------->
     <main>
       <section class="section-service">
         <div class="container">
           <h1 class="section-service-title">
             Эффективные решения для вашего бизнеса
           </h1>
-          <button class="section-service-btn" type="button">
+          <button class="section-service-btn" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
       </section>
-      <!--СФЕРА ДЕЯТЕЛЬНОСТИ-->
+      <!-------------------------СФЕРА ДЕЯТЕЛЬНОСТИ----------------------------->
       <section class="section-reality">
         <div class="container">
           <h2 class="visually-hidden">сфера деятельности</h2>
@@ -125,7 +125,7 @@
           </ul>
         </div>
       </section>
-      <!--ЧЕМ ЗАНИМАЮТСЯ-->
+      <!----------------------------ЧЕМ ЗАНИМАЮТСЯ------------------------------------------>
       <section class="section-class">
         <div class="container">
           <h2 class="section-class-title">Чем мы занимаемся</h2>
@@ -150,7 +150,7 @@
         </div>
       </section>
 
-      <!--КОМАНДА-->
+      <!------------------------КОМАНДА-------------------------------------->
       <section class="section-team">
         <div class="container">
           <h2 class="section-team-title">Наша команда</h2>
@@ -327,7 +327,7 @@
           </ul>
         </div>
       </section>
-      <!--КЛИЕНТЫ-->
+      <!---------------------------КЛИЕНТЫ------------------------------>
       <section class="section-clients">
         <div class="container">
           <h2 class="section-clients-title">Постоянные клиенты</h2>
@@ -378,7 +378,7 @@
         </div>
       </section>
     </main>
-    <!--ПОДВАЛ-->
+    <!----------------------------ПОДВАЛ---------------------------------->
     <footer class="footer">
       <div class="container">
         <div class="footer-left-container">
@@ -444,6 +444,16 @@
         </div>
       </div>
     </footer>
+    /* -----------------------МОДАЛЬНОЕ ОКНО------------------------- */
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-icon" width="30" height="30">
+            <use href="./img/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
